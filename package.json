@@ -10,14 +10,14 @@
     "node": ">=8.9.0"
   },
   "scripts": {
+    "prepare": "rimraf dist/ lib/ && npm run compile && npm run dist",
     "test:lint": "eslint --fix src test",
     "test:unit": "mocha --require @babel/register --recursive test/unit/**",
     "test:unit:watch": "npm run test:unit -- --watch",
     "test:functional": "cd test/functional && webpack-dev-server",
     "test": "npm run test:lint && npm run test:unit",
     "compile": "babel -d lib/ src/",
-    "dist": "mkdir -p dist && browserify lib/index.js --standalone dxf -o dist/dxf.js",
-    "prepare": "rimraf dist/ lib/ && npm run compile && npm run dist"
+    "dist": "mkdir -p dist && browserify lib/index.js --standalone dxf -o dist/dxf.js"
   },
   "repository": {
     "type": "git",
