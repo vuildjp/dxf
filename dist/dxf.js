@@ -378,7 +378,7 @@ var interpolateEllipse = function interpolateEllipse(cx, cy, rx, ry, start, end,
 
 
   var points = [];
-  var dTheta = Math.PI * 2 / 72;
+  var dTheta = Math.PI * 2 / 144;
   var EPS = 1e-6;
 
   for (var theta = start; theta < end - EPS; theta += dTheta) {
