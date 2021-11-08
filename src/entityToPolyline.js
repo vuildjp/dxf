@@ -35,7 +35,7 @@ const interpolateEllipse = (cx, cy, rx, ry, start, end, rotationAngle) => {
 
   // Start point
   let points = []
-  const dTheta = Math.PI * 2 / 144
+  const dTheta = Math.PI * 2 / 144000
   const EPS = 1e-6
   for (let theta = start; theta < end - EPS; theta += dTheta) {
     points.push([
