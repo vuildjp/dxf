@@ -3,7 +3,9 @@
   "version": "4.6.1",
   "description": "DXF parser for node/browser",
   "main": "lib/index.js",
-
+  "bin": {
+    "dxf-to-svg": "lib/cli.js"
+  },
   "engines": {
     "node": ">=8.9.0"
   },
